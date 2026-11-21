@@ -1,5 +1,5 @@
 def main():
-    print("Hello from Git DevOps Playground!")
+    print("Testing the staging area!")
 
 if __name__ == "__main__":
     main()
