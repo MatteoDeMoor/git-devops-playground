@@ -1,0 +1,22 @@
+
+name: Simulated Deployment
+
+on:
+  push:
+    branches: [develop, acceptance, main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ github.ref_name == 'main' && 'production' || github.ref_name == 'acceptance' && 'acceptance' || 'development' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate deployment
+        run: |
+          echo "Deploying branch: ${{ github.ref_name }}"
+          echo "Deployment simulation successful!"
