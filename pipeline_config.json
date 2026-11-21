@@ -1,5 +1,6 @@
 {
   "pipeline_name": "customer_data",
   "batch_size": 100,
-  "retry_count": 3
+  "retry_count": 5,
+  "logging_enabled": true
 }
